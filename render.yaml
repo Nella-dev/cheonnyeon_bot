@@ -1,0 +1,14 @@
+# Render Background Worker
+# Build Command : pip install -r requirements.txt
+# Start Command : python bot.py
+services:
+  - type: worker
+    name: cheonnyeon-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
