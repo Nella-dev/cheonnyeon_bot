@@ -12,7 +12,7 @@ def _int(value, default: int = 0) -> int:
 
 
 # ---------------------------------------------------------------- 기본 정보
-TOKEN = (os.getenv("MTU1NzUxNTI0NTIzOTUzMzY0OA.GsZxDB.fajGr-ut26xxakRQ6aIhoCa5Zp2XXOlARe0g3w") or "").strip()
+TOKEN = (os.getenv("DISCORD_TOKEN") or "").strip()
 GUILD_ID = _int(os.getenv("GUILD_ID"), 0)
 DB_PATH = os.getenv("DB_PATH", "data/eclipse.db")
 
@@ -55,16 +55,22 @@ DEFAULT_CHANNELS = {
 DEFAULT_RANKS = [
     "길드마스터",
     "부길드마스터",
+    "운영진",
     "정예길드원",
     "길드원",
+    "수습길드원",
 ]
 
 # 직업은 자유 입력입니다. 자주 쓰는 값은 여기서 자동완성 후보로 쓰입니다.
 DEFAULT_JOBS = [
-    "파이터",
-    "레인저",
+    "나이트블레이드",
+    "팬텀랜서",
     "소서리스",
+    "프리스트",
+    "가디언",
     "어쌔신",
+    "버서커",
+    "레인저",
 ]
 
 VOTE_MAX_OPTIONS = 10
